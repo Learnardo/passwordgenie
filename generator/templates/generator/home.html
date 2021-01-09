@@ -1,0 +1,36 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+  <h2>Ultra-secure passwords.</h2>
+
+  <form action="{% url 'password' %}">
+    <br> Length
+      <select class="" name="length">
+          <option value="8">8 characters</option>
+          <option value="10">10 characters </option>
+          <option value="12" selected="selected">12 characters</option>
+          <option value="14">14 characters</option>
+      </select>
+      <br>
+        <label class="form-check-label" for="flexSwitchCheckChecked">Uppercase</label>
+        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="uppercase" checked>
+
+      <br>
+
+      <label class="form-check-label" for="flexSwitchCheckChecked">Numbers</label>
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="numbers" checked>
+
+      <br>
+
+      <label class="form-check-label" for="flexSwitchCheckChecked">Special characters</label>
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="special" checked>
+
+      <br>
+      <br>
+      <input type="submit" class="btn btn-lg btn-secondary fw-bold border-white bg-white" value="🔮 Generate">
+  </form>
+
+
+
+{% endblock content %}
